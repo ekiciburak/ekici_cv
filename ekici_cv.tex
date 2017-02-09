@@ -1,0 +1,219 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{fontspec} 
+\usepackage{bbm, dsfont}
+
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=6.0in, textheight=9.4in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+%\setmonofont[Scale=0.8]{Monaco}
+%%% modified by Karol Kozioł for ShareLaTeX use
+\setmainfont[
+  Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+  BoldFont=LinLibertine_RB.otf,
+  ItalicFont=LinLibertine_RI.otf,
+  BoldItalicFont=LinLibertine_RBI.otf
+]{LinLibertine_R.otf}
+\setmonofont[Scale=0.8]{DejaVuSansMono.ttf}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{20pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[%dvipdfm, 
+bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Burak Ekici - vita},
+	pdfauthor={My name},
+	pdfproducer={http://ljk.imag.fr/membres/Burak.Ekici/}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+% DOCUMENT
+\begin{document}
+{\LARGE Burak Ekici, Ph.D.}\\[0.25cm]
+The University of Iowa\\
+Department of Computer Science, 14 MacLean Hall, Iowa City, IA 52242, USA\\
+Bureau: MLH 201N\\
+%Phone: \texttt{+33 (0) 476 514 561}\\
+email: \href{mailto:burak-ekici@uiowa.edu}{burak-ekici@uiowa.edu}\\
+\textsc{url}: \href{http://ekiciburak.github.io/}{http://ekiciburak.github.io/}\\ [0.1cm]
+%Born:  August 25, 1986---Turkey\\
+Languages: Turkish(native), English (operational), French(intermediate), Italian(intermediate)
+
+\section*{Education \& Employment}
+
+\years{\normalsize2016} Post-Doctoral Research Fellow $@$ \textit{The University of Iowa}, Iowa City-IA, USA.\\
+\emph{Project}: \textbf{Integrating CVC4 into SMTCoq.}\\
+\emph{Advisor}: Cesare Tinelli.\\
+\emph{With}: Chantal Keller and Alain Mebsout.\\
+
+\years{\normalsize2013-2015} PhD Student $@$ \textit{University Grenoble Alpes (formerly Joseph Fourier)}, Grenoble-France.\\
+\emph{Thesis}: \textbf{Certification of programs with computational effects.}
+ [\href{https://tel.archives-ouvertes.fr/tel-01250842/document}{manuscript}]
+ [\href{http://ljk.imag.fr/membres/Burak.Ekici/PHDTHESIS/ekici_defense_slides.pdf}{slides}]
+ \\
+\emph{Advisors}: Jean-Guillaume Dumas, Dominique Duval, Damien Pous.\\
+
+\years{\normalsize2009-2012} MSc Student $@$ \textit{Yaşar University}, Izmir-Turkey.\\
+\emph{Thesis}: \textbf{A parallelization approach to Haskell language through categoty theoretic implementations.}\\
+\emph{Advisor}: Ahmet H. Koltuksuz.\\
+
+\years{\normalsize2010-2011} Trainee Researcher $@$ \textit{ European Commission Joint Research Centre},  Ispra(VA)-Italy.\\
+\emph{Project}: \textbf{Linearity detection of the growth effect on children fingertips.}\\
+\emph{Advisor}: Günter-Egon Schumacher.\\
+
+\years{\normalsize2004-2009} BSc Student $@$ \textit{Izmir Institute of Technology}, Izmir-Turkey.\\
+\emph{Thesis}: \textbf{Parallelization of mathematical functions of a cryptographic and multiprecision library, Crympix.}\\
+\emph{Advisor}: Ahmet H. Koltuksuz.\\
+\emph{With}: Görkem Kılınç and Çağatay Yücel.
+
+\section*{Research Interests}
+Semantics of computational effects, categorical computer science, formal logic, type theory, Coq, SMT.
+
+%\section*{Research Experience}
+%\subsection*{Current Research}
+%\years{\normalsize2011-2012} Undergraduate researcher $@$ Yaşar University, Izmir-Turkey.\\
+%\years{\normalsize2010-2011} Trainee researcher $@$ European Commission Joint Research Centre, Ispra(VA)-Italy.\\
+%\years{\normalsize2009-2010} Undergraduate researcher $@$ Yaşar University, Izmir-Turkey.\\
+%\years{\normalsize2007-2009} Undergraduate researcher $@$ IS$^3$ Lab., Izmir-Turkey.
+
+
+
+\section*{Publications \& Abstracts}
+\subsection*{Conference Papers}
+\years{\normalsize2017}
+\lq\lq{\href{http://ekiciburak.github.io/}{SMTCoq: A plug-in for integrating SMT solvers into Coq.}}''
+(\emph{submitted.})
+\\[0.25cm]
+
+\years{\normalsize2016}
+\emph{Burak Ekici}, Guy Katz, Chantal Keller, Alain Mebsout, Andrew Reynolds and Cesare Tinelli.
+\lq\lq{\href{http://eptcs.web.cse.unsw.edu.au/paper.cgi?HaTT2016.5}{Extending SMTCoq, a Certified Checker for SMT (Extended Abstract).}}
+\emph{HaTT 2016: 1st International Workshop on Hammers for Type Theories, Coimbra, Portugal, July 2016.}
+\\[0.25cm]
+\years{\normalsize2015}
+Jean-Guillaume Dumas, Dominique Duval, \emph{Burak Ekici}, Damien Pous and Jean-Claude Reynaud. ``\href{https://hal.archives-ouvertes.fr/hal-01121924}{Hilbert-Post completeness for the state and the exception effects.}''
+\emph{MACIS 2015: Sixth International Conference on Mathematical Aspects of Computer and Information Sciences, Berlin,
+Germany, 11–13 November 2015.}
+\\[0.25cm]
+%\years{\normalsize2015}\emph{Burak Ekici}. \lq\lq{}\href{https://hal.archives-ouvertes.fr/hal-01132831}{IMP with exceptions over decorated logic.}\rq\rq{} \textit{(presented at Trends in Functional Programming (TIFP 2015)).}\\[0.25cm]
+\years{\normalsize2014}Jean-Guillaume Dumas, Dominique Duval, \emph{Burak Ekici} and Jean-Cluaude Reynaud. \lq\lq{}\href{https://hal.archives-ouvertes.fr/hal-00867237}{Certified proofs in programs involving exceptions.}\rq\rq{} \textit{
+CICM 2014 : Eigth Conference on Intelligent Computer Mathematics, Coimbra, Portugal, 7--11 July 2014,
+CEUR Workshop Proceedings, no 1186, paper 20. }\\[0.25cm]
+\years{\normalsize2014}Jean-Guillaume Dumas, Dominique Duval, \emph{Burak Ekici} and Damien Pous. \lq\lq{\href{https://hal.archives-ouvertes.fr/hal-00869230}{Formal verification in Coq of program properties involving the global state effect}}\rq\rq{} \textit{JFLA 2014 : Journées Francophones des Langages Applicatifs, Fréjus, France, 8--11 January 2014. }\\[0.25cm]
+\years{\normalsize2010} \emph{Burak Ekici}, Çağatay Yücel, Görkem Kılınç, Ahmet H. Koltuksuz, \lq\lq{}\textbf{Implementations of Category Theory in Computer Science.}", \emph{9$^{th}$ National Mathematics Symposium, Karadeniz Technical University, October 2010.}\\[0.25cm]
+\years{\normalsize2010} K. Kratchanov, E. Golemanova, T. Golemanov, T. Ercan, \emph{B. Ekici}. \lq\lq{}\href{http://arxiv.org/abs/1412.4184}{Implementation of Search Strategies in Control Network Programming.}", \emph{Procedural and Non-Procedural In: Proc. Intl. Symposium in Innovations in Intelligent Systems
+and Applications (INISTA 2010), June 2010, Kayseri, Turkey, 386-390.}
+\subsection*{Research Reports}
+\years{\normalsize2015}
+\emph{Burak Ekici}.
+``\href{https://hal.archives-ouvertes.fr/hal-01132831}{IMP with exceptions over decorated logic.}''
+\emph{Pre-proceedings of Trends in
+Functional Programming (TFP 2015). Rejected from the post-proceedings of TFP 2015 for basic improvements.}
+\subsection*{Abstracts}
+\years{\normalsize2014}Jean-Guillaume Dumas, Dominique Duval, \emph{Burak Ekici} and Damien Pous. \lq\lq{}\href{http://arxiv.org/abs/1411.7140}{Program certification with computational effects.}\rq\rq{} \textit{Journées Nationales de Calcul Formel (JNCF) 2014, Marseille, France Novermber 2014.}\\[0.25cm]
+\years{\normalsize2014} \emph{Burak Ekici.} \lq\lq{}\href{http://arxiv.org/abs/1411.7139}{Certification of programs with computational effects.}\rq\rq{} \textit{Doctoral session. CICM 2014 : Eigth Conference on Intelligent Computer Mathematics, Coimbra, Portugal, 7--11 July 2014.}
+\section*{Recent Talks}
+\subsection*{Invited}
+\years{\normalsize10.11.2015} \href{http://www.fmf.uni-lj.si/si/obvestila/35243/}{Relative Hilbert-Post completeness for exceptions.} Foundations Seminar, Ljubljana-Slovenia.\\
+\subsection*{Others}
+\years{\normalsize03.06.2015} \href{ftp://ftp-sop.inria.fr/indes/TFP15/TFP2015_talk_6.pdf}{ IMP with exceptions over decorated logic.} TFP'15, Sophia-Antipolis-France.\\[0.25cm]
+\years{\normalsize20.11.2014} \href{http://www-ljk.imag.fr/Seminars/1415889734530/Ekici_casys-meff.pdf}{ Certification of programs with computational effects.} CASYS-MEFF Seminars, Grenoble-France.\\[0.25cm]
+\years{\normalsize05.11.2014} \href{http://www.lifl.fr/jncf2014/files/slides/ekici.pdf}{Program certification with computational effects.} JNCF'14, Marseille-France.\\[0.25cm]
+\years{\normalsize11.07.2014} \href{http://ljk.imag.fr/membres/Burak.Ekici/CICM14/BurakEkici_presentation.pdf}{ Certification of programs with computational effects.} CICM'14, Coimbra-Portugal.\\[0.25cm]
+\years{\normalsize18.02.2014} \href{http://ljk.imag.fr/membres/Burak.Ekici/BurakEkici_IMP_EXC.pdf}{\{IMP + Exc\} over Decorated Logic.} LJK, Grenoble-France.\\[0.25cm]
+\years{\normalsize09.01.2014} \href{http://jfla.inria.fr/2014/ekici.pdf}{ Formal verification in Coq of program properties involving the global state effect.} JFLA'2014, Fréjus - France.\\[0.25cm]
+\years{\normalsize05.12.2013} \href{http://ljk.imag.fr/membres/Burak.Ekici/BurakEkici_LJK-Seminar.pdf}{ Formal verification in Coq of program properties involving the global state effect.}
+Séminaires LJK-Modèles et Algorithmes Déterministes: BIPOP-CASYS, Grenoble-France.\\[0.25cm]
+\years{\normalsize11.10.2013} \href{http://ljk.imag.fr/membres/Burak.Ekici/BurakEkici_ExpLJK.pdf}{Proofs About Programs Involving Computational Effects.} Exposé au LJK, Grenoble-France.\\[0.25cm]
+\years{\normalsize23.05.2013} \href{http://ejcp2013.inria.fr/files/student_presentations/Burak.Ekici.pdf}{Certification of Programs with Computational Effects.} EJCP 2013, Dinard-France.
+
+\section*{Events Attended}
+\subsection*{Invited}
+\years{\normalsize09-13.11.15} University of Ljubljana (invited by Dr. Andrej Bauer), Ljubljana, Slovenia.
+\subsection*{Others}
+\years{\normalsize03-05.06.15} The Sixteenth Symposium on Trends in Functional Programming (TIFP'15), INRIA, Sophia-Antipolis-France.\\[0.25cm]
+\years{\normalsize26-29.05.15}  Colloque Inter'Actions en Mathématiques 2015 (member of the
+organization committee), 
+Institut Fourier, Grenoble-France.\\[0.25cm]
+\years{\normalsize03-07.11.14} Journées Nationales de Calcul Formel (JNCF'14), CIRM, Marseille-France.\\[0.25cm]
+\years{\normalsize07-11.07.14} Conferences on Intelligent Computer Mathematics (CICM'14), Coimbra-Portugal.\\[0.25cm]
+\years{\normalsize07-18.04.14} PhD school on semantics of proofs and certified mathematics by Institut Henri Poincaré, CIRM, Marseille-France. \\[0.25cm]
+\years{\normalsize07-11.01.14} JFLA: Journées Francophones des Langages Applicatifs, La-villa-clythia, Fréjus-France. \\[0.25cm]
+\years{\normalsize23-31.05.13} École Jeunes Chercheurs en Programmation, Inria, Rennes-France.\\[0.25cm]
+\years{\normalsize17-29.04.12} IWOSI: The Information Warfare, Cyber Warfare and Open Sources Intelligence
+(member of the organization committee), Izmir-Turkey. \\[0.25cm]
+\years{\normalsize01-02.09.09} Workshop on The Security of Information and Communication Technologies: A
+Turkey \& EC-JRC Joint Effort, Izmir-Turkey.\\[0.25cm]
+\years{\normalsize25-26.09.09}Workshop on Multi-Core Architectures \& Parallel Programming with Intel Software
+Tools (member of the organization committee), Izmir-Turkey. 
+
+\section*{Code}
+Please see my \href{https://github.com/ekiciburak}{github repository.}
+\section*{Miscellaneous}
+Programming: C/C++, Haskell, OCaml, Coq. \\[0.25cm]
+Libraries: CRYMPIX, OpenMP, WHY3, SMTCoq.
+\section*{Referees}
+\href{http://ljk.imag.fr/membres/Jean-Guillaume.Dumas/}{Jean-Guillaume Dumas} \hfill \href{http://ljk.imag.fr/membres/Dominique.Duval/}{Dominique Duval}\\
+LJK, University Grenoble Alpes \hfill LJK, University Grenoble Alpes\\
+Phone: +33 (0) 457 421 732 \hfill Phone: +33 (0) 457 421 734 \\
+email: \href{mailto:Jean-Guillaume.Dumas@imag.fr}{Jean-Guillaume.Dumas@imag.fr} \hfill email: \href{mailto:Dominique.Duval@imag.fr}{Dominique.Duval@imag.fr}\\
+
+\href{http://homepage.cs.uiowa.edu/~tinelli/index.html}{Cesare Tinelli}\\
+Department of Computer Science, The University of Iowa\\
+Phone: +1-319-335-0735\\
+email: \href{mailto:cesare-tinelli@uiowa.edu}{cesare-tinelli@uiowa.edu}\\
+
+
+\begin{center}
+{\scriptsize  Last updated:\today\- •\- 
+% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+Typeset in \href{http://en.wikipedia.org/wiki/XeTeX}{
+%\fontspec{Times New Roman}
+\XeTeX}}
+% ---- FILL IN THE FULL URL TO YOUR CV HERE
+%\href{http://ljk.imag.fr/membres/Burak.Ekici/}{http://ljk.imag.fr/membres/Burak.Ekici/}}
+\end{center}
+
+\end{document}
